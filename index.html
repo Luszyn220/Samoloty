@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legendy Lotnictwa: Concorde & DC-10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <a href="#hero" class="logo">Samoloty</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Przełącz menu nawigacji">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <nav class="nav" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#concorde" class="nav-link">Concorde</a></li>
+          <li><a href="#dc10" class="nav-link">DC-10</a></li>
+          <li><a href="#porownanie" class="nav-link">Porównanie</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-btn" aria-label="Zmień motyw">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Ikony Złotej Ery Lotnictwa</h1>
+        <p>Przełomowe konstrukcje, które na zawsze zmieniły podróże pasażerskie w drugiej połowie XX wieku.</p>
+        <a href="#concorde" class="btn">Poznaj konstrukcje</a>
+      </div>
+    </section>
+
+    <section id="concorde" class="section">
+      <div class="container grid-two-columns">
+        <div class="plane-text">
+          <h2>Aérospatiale / BAC Concorde</h2>
+          <p>Naddźwiękowy samolot pasażerski, który wszedł do regularnej służby w 1976 roku. Rozwijał prędkość przelotową przekraczającą dwukrotną prędkość dźwięku (ponad Mach 2), co pozwalało pokonać trasę z Londynu do Nowego Jorku w niecałe 3,5 godziny.</p>
+          <ul class="plane-specs">
+            <li><strong>Prędkość maksymalna:</strong> 2 179 km/h (Mach 2.04)</li>
+            <li><strong>Zasięg operacyjny:</strong> 7 222 km</li>
+            <li><strong>Pojemność:</strong> 92–128 pasażerów</li>
+            <li><strong>Pierwszy lot:</strong> 2 marca 1969 r.</li>
+          </ul>
+        </div>
+        <div class="plane-media">
+          <img src="images/concorde.jpg" alt="Concorde w locie" class="plane-img">
+        </div>
+      </div>
+    </section>
+
+    <section id="dc10" class="section bg-alt">
+      <div class="container grid-two-columns">
+        <div class="plane-media">
+          <img src="images/dc10.jpg" alt="DC-10 na płycie lotniska" class="plane-img">
+        </div>
+        <div class="plane-text">
+          <h2>McDonnell Douglas DC-10</h2>
+          <p>Amerykański szerokokadłubowy samolot pasażerski średniego i dalekiego zasięgu. Jego najbardziej rozpoznawalnym elementem konstrukcyjnym jest trzeci silnik turbowentylatorowy osadzony centralnie w podstawie statecznika pionowego.</p>
+          <ul class="plane-specs">
+            <li><strong>Prędkość przelotowa:</strong> 908 km/h</li>
+            <li><strong>Zasięg operacyjny:</strong> do 9 600 km</li>
+            <li><strong>Pojemność:</strong> 250–380 pasażerów</li>
+            <li><strong>Pierwszy lot:</strong> 29 sierpnia 1970 r.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="porownanie" class="section">
+      <div class="container">
+        <h2>Zestawienie parametrów technicznych</h2>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Parametr</th>
+                <th>BAC Concorde</th>
+                <th>McDonnell Douglas DC-10</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Układ napędowy</td>
+                <td>4 silniki turboodrzutowe Rolls-Royce/Snecma Olympus 593</td>
+                <td>3 silniki turbowentylatorowe General Electric CF6</td>
+              </tr>
+              <tr>
+                <td>Przeznaczenie</td>
+                <td>Naddźwiękowy transport luksusowy</td>
+                <td>Masowy transport pasażerski i transport cargo</td>
+              </tr>
+              <tr>
+                <td>Maksymalny pułap</td>
+                <td>18 300 m</td>
+                <td>12 800 m</td>
+              </tr>
+              <tr>
+                <td>Typ skrzydła</td>
+                <td>Skrzydło trójkątne (delta ogiwalna)</td>
+                <td>Klasyczne skrzydło skośne</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section bg-alt">
+      <div class="container">
+        <h2>Quiz wiedzy o lotnictwie</h2>
+        <div class="quiz-box">
+          <div id="quizQuestion" class="quiz-question">Ładowanie pytania...</div>
+          <div id="quizOptions" class="quiz-options"></div>
+          <button id="quizNextBtn" class="btn btn-secondary">Następne pytanie</button>
+          <div id="quizResult" class="quiz-result"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="container">
+        <h2>Formularz kontaktowy</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="nameInput">Imię i nazwisko</label>
+            <input type="text" id="nameInput" name="name" placeholder="Wpisz imię i nazwisko" required>
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">Adres e-mail</label>
+            <input type="email" id="emailInput" name="email" placeholder="adres@domena.pl" required>
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="msgInput">Wiadomość</label>
+            <textarea id="msgInput" name="message" rows="4" placeholder="Wpisz treść wiadomości..." required></textarea>
+            <span class="error-msg" id="msgError"></span>
+          </div>
+          <button type="submit" class="btn">Wyślij wiadomość</button>
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Samoloty. Projekt statycznej strony internetowej.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Do góry">&#8593;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
