@@ -387,3 +387,72 @@ h2 {
   box-shadow: var(--shadow);
   z-index: 99;
 }
+
+@media (max-width: 860px) {
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .grid-two-columns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .plane-section:nth-of-type(even) .plane-media {
+    order: -1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .plane-media {
+    height: 240px;
+  }
+
+  .quiz-box,
+  .contact-form {
+    padding: 1.4rem;
+  }
+}
