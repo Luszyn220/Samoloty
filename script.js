@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
+ 
   //  2. Przełącznik trybu ciemnego/jasnego 
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
